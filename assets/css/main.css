@@ -139,7 +139,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			html {
-				font-size: 11pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -2962,7 +2962,7 @@ input, select, textarea {
 
 		ul.icons li {
 			display: inline-block;
-			padding: 0 0.25rem 0 0;
+			padding: 0 0.25rem 0.25rem 0;
 		}
 
 			ul.icons li:last-child {
@@ -5096,7 +5096,7 @@ input, select, textarea {
 /* Spotlight (style2) */
 
 	.spotlight.style2 {
-		padding: 3rem 7rem 1rem 7rem ;
+		padding: 3rem 7rem 0.75rem 7rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -5156,7 +5156,7 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			.spotlight.style2 {
-				padding: 3rem 5rem 1rem 5rem ;
+				padding: 3rem 5rem 0.75rem 5rem ;
 			}
 
 		}
@@ -5164,7 +5164,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.spotlight.style2 {
-				padding: 3rem 4rem 1rem 4rem ;
+				padding: 3rem 4rem 0.75rem 4rem ;
 			}
 
 		}
@@ -5172,7 +5172,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			.spotlight.style2 {
-				padding: 3rem 3rem 1rem 3rem ;
+				padding: 3rem 3rem 0.75rem 3rem ;
 			}
 
 				.spotlight.style2 .image {

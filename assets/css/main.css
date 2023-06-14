@@ -2588,11 +2588,12 @@ input, select, textarea {
 		}
 
 		.icon.style2:before {
-			border-radius: 2.75em;
+			border-radius: 2.25em;
 			display: inline-block;
-			height: 2.75em;
-			line-height: 2.75em;
-			width: 2.75em;
+			height: 2.25em;
+			line-height: 2.25em;
+			width: 2.25em;
+			font-size: 1.25em;
 		}
 
 		.icon.major {
@@ -2666,11 +2667,12 @@ input, select, textarea {
 		}
 
 		.ai.style2:before {
-			border-radius: 2.75em;
+			border-radius: 2.25em;
 			display: inline-block;
-			height: 2.75em;
-			line-height: 2.75em;
-			width: 2.75em;
+			height: 2.25em;
+			line-height: 2.25em;
+			width: 2.25em;
+			font-size: 1.25em;
 		}
 
 		.ai.major {

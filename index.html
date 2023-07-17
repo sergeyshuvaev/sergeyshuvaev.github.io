@@ -21,17 +21,20 @@
 					<h2><b>Sergey Shuvaev, Ph.D.</b></h2>
 				</head>
 				<p>
-					I received B.Sc., M.Sc., and Ph.D. in Applied Mathematics and Physics from Moscow Institute of Physics and Technology.
-					For my Ph.D., I worked with <a href="https://www.cshl.edu/research/faculty-staff/alexei-koulakov/">Dr. Alexei Koulakov</a> at
-					<a href="http://cshl.edu">Cold Spring Harbor Laboratory</a> as a Swartz Fellow to develop machine-learning models of animal behavior and neural activity.
-					During my B.Sc., I worked with <a href="https://renaissance.stonybrookmedicine.edu/anesthesiology/faculty/Enikolopov">Dr. Grigori Enikolopov</a> as an Abramov and Frolov Scholar
-					to build computer-vision pipelines for identifying changes in brain-wide neural dynamics.
-					For my M.Sc., I worked with the Superconductivity Department at the Kurchatov Institute as an Alexandrov Scholar to complement my computational background with experience in building electrical equipment.
-					My work led to <a href="https://scholar.google.com/citations?user=A2rXeeQAAAAJ&hl=en">10+ publications with 100+ citations</a> including NeurIPS, ICML, and PNAS.
-					It was featured in <a href="https://nautil.us/the-doctor-will-sniff-you-now-238116/">Nautilus</a>, <a href="https://www.spectrumnews.org/news/a-stop-motion-movie-of-the-whole-brain-starring-new-neurons/">Spectrum</a>,
-					<a href="https://coexisting-with-ai.simplecast.com/episodes/cwa4-human-brains-vs-artificial-brains-H9FUaC_z">Coexisting with AI</a>, and <a href="https://www.eye-on.ai/podcast-021">Eye on AI</a>
-					and received awards from the Gatsby Charitable Foundation, Burroughs Wellcome Fund, Google DeepMind, and Simons Foundation.
-					My service as a reviewer for ICML, ICLR, NeurIPS, and COSYNE was recognized by two Top Reviewer awards.
+					My research focuses on biologically-informed models of decision-making.
+					Towards this goal, I combine computational neuroscience, RL, Bayesian methods, and game theory.
+					I am interested in merging this work with optimal control methods to facilitate safe and efficient human-robot interaction.
+
+					I hold a B.Sc., M.Sc., and Ph.D. in Applied Mathematics and Physics from the Moscow Institute of Physics and Technology.
+					For my Ph.D., I worked on ML models of behavior with <a href="https://www.cshl.edu/research/faculty-staff/alexei-koulakov/">Dr. Alexei Koulakov</a> at <a href="http://cshl.edu">Cold Spring Harbor Laboratory</a>.
+					During my B.Sc., I designed CV pipelines to analyze brain scans with <a href="https://renaissance.stonybrookmedicine.edu/anesthesiology/faculty/Enikolopov">Dr. Grigori Enikolopov</a>.
+					For my M.Sc., I built electrical equipment with the Superconductivity Department at the Kurchatov Institute.
+
+					My work led to <a href="https://scholar.google.com/citations?user=A2rXeeQAAAAJ&hl=en">10+ publications with 100+ citations</a>;
+					it was featured in <a href="https://nautil.us/the-doctor-will-sniff-you-now-238116/">Nautilus</a>, <a href="https://www.spectrumnews.org/news/a-stop-motion-movie-of-the-whole-brain-starring-new-neurons/">Spectrum</a>,
+					<a href="https://coexisting-with-ai.simplecast.com/episodes/cwa4-human-brains-vs-artificial-brains-H9FUaC_z">Coexisting with AI</a>, and <a href="https://www.eye-on.ai/podcast-021">Eye on AI</a>.
+					I was honored to be selected as a Swartz Fellow (Ph.D.), an Alexandrov Scholar (M.Sc.), and an Abramov and Frolov Scholar (B.Sc.).
+					My service as a reviewer for ICML, ICLR, and NeurIPS was recognized with two Top Reviewer awards.
 				</p>
 				<ul class="icons">
 					<li><a href="mailto:sergey.a.shuvaev@gmail.com" class="icon style2 fa-envelope"></a></li>
@@ -39,11 +42,48 @@
 					<li><a href="https://scholar.google.com/citations?user=A2rXeeQAAAAJ" class="ai style2 ai-google-scholar"></a></li>
 					<li><a href="https://www.researchgate.net/profile/Sergey-Shuvaev" class="ai style2 ai-researchgate"></a></li>
 					<li><a href="https://twitter.com/SergeyAShuvaev" class="icon brands style2 fa-twitter"></a></li>
-					<li><a href="uploads/Shuvaev_CV.pdf"><b>Curriculum Vitae</b></a></li>
+					<li><a href="#experience" class="smooth-scroll"><b>Experience</b></a></li>
+					<li><a href="#work" class="smooth-scroll"><b>Publications</b></a></li>
+					<li><a href="uploads/Shuvaev_CV.pdf"><b>CV</b></a></li>
 				</ul>
 			</div>
 			<div class="image">
 				<img src="uploads/me.jpg" alt="" />
+			</div>
+		</section>
+
+		<!-- Projects -->
+		<section class="wrapper style1 align-center" id="projects">
+			<div class="inner">
+				<h2>Featured projects</h2>
+
+					<div class="content align-left">
+
+						<h4 class="align-center"><b>Multi-agent</b></h4>
+						<p>
+							<span class="image left"><img src="uploads/conflict.png" alt="" /></span>
+							Social conflict is a survival mechanism leading to normal and pathological behaviors. To understand the principles of social conflict, we used behavioral and neural data from mice advancing through its stages.
+							We modeled their interactions as a normal-form game to define the optimal actions and used Bayesian inference to account for partial observability.
+							With our model and behavioral data, we formed and validated hypotheses about the reward schedule, information availability, and evidence accumulation corresponding to conflict behaviors.
+							We found that the animals’ actions were consistent with the first-level Theory of Mind (1-ToM) where agents maintain “primary” beliefs about the strengths and “secondary” beliefs about the beliefs of their opponents.
+							We further found that the 1-ToM beliefs – the latent variables in our model – are significantly correlated with patterns of neural activity, unexplained by other task variables.
+							Overall, our work offers a robust biologically-informed model of social conflict and a framework for future studies of social behaviors in partially observable settings.
+							| <i><a href="https://arxiv.org/abs/2303.04285">paper</a></i>
+						</p>
+
+						<h4 class="align-center"><b>Single-agent</b></h4>
+						<p>
+							<span class="image left"><img src="uploads/foraging.png" alt="" /></span>
+							Individuals choose whether to maintain the status quo or to pursue better options. Multiple models have been proposed to explain such choices; however, new evidence has revealed their inconsistency with data.
+							To bridge this gap, we compared behavioral data to predictions of RL models. We first show that stay-or-leave decisions are non-Markovian.
+							We find that, with comprehensive history information, these decisions are consistent with R-learning but not with V- or Q-learning.
+							We further show that R-learning converges to a leaky version of the marginal value theorem (MVT), a classical result from optimal control theory.
+							The leaky MVT posits that R-learning agents leave depleting resources when reward falls below its leaky average, which, we argue, is Bayes optimal in dynamic natural environments.
+							The leaky average can be computed with a single recurrent neuron, enabling compute-efficient implementation of the decision rule.
+							Overall, our work links RL, optimal control, and Bayesian inference to describe a learning algorithm, a decision rule, and a rationale for stay-or-leave choices.
+							| <i><a href="https://proceedings.neurips.cc/paper/2020/hash/da97f65bd113e490a5fab20c4a69f586-Abstract.html">paper</a></i>
+						</p>
+					</div>
 			</div>
 		</section>
 
@@ -127,25 +167,23 @@
 						<div class="content">
 							<header>
 								<h4><b><a href="https://arxiv.org/abs/2303.04285">A normative theory of social conflict</a></b></h4>
-								<p>arXiv, 2023 | <b>Shuvaev, S.,</b> Amelchenko, E., Smagin, D., Kudryavtseva, N., Enikolopov, G., and Koulakov, A.</p>
+								<p>arXiv, 2023 | <b>Shuvaev, S.,</b> Amelchenko, E., Smagin, D., Kudryavtseva, N., Enikolopov, G., and Koulakov, A. | <a href="javascript:($('#aggression').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>Chronic aggression often leads to bullying or social defeat. Why engage in such unproductive behaviors?
+							<p id="aggression" style="display:none;">Chronic aggression often leads to bullying or social defeat. Why engage in such unproductive behaviors?
 							We find in mice that individuals maintain beliefs about the strengths and beliefs of each other. Upon interactions, these beliefs shift, resulting in actions that ignore real strengths.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2020.609316/full">Neural networks with motivation</a></b></h4>
-								<p>Front Sys Neurosci, 2021 | <b>Shuvaev, S.,</b> Tran, N., Stephenson-Jones, M., Li, B., and Koulakov, A.</p>
+								<p>Front Sys Neurosci, 2021 | <b>Shuvaev, S.,</b> Tran, N., Stephenson-Jones, M., Li, B., and Koulakov, A. | <a href="javascript:($('#motivation').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>To make decisions, we rely on observations, experience, and motivation. What is the computational benefit of the latter, and can we use it in machine learning?
+							<p id="motivation" style="display:none;">To make decisions, we rely on observations, experience, and motivation. What is the computational benefit of the latter, and can we use it in machine learning?
 							We find that biological motivations speed up reinforcement learning, compress the models, and enable zero-shot learning for new tasks.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://proceedings.neurips.cc/paper/2020/hash/da97f65bd113e490a5fab20c4a69f586-Abstract.html">R-learning in actor-critic model offers a biologically relevant mechanism for sequential decision-making</a></b></h4>
-								<p>NeurIPS, 2020 | <b>Shuvaev, S.*,</b> Starosta, S.*, Kvitsiani, D., Kepecs, A., and Koulakov, A.</p>
+								<p>NeurIPS, 2020 | <b>Shuvaev, S.*,</b> Starosta, S.*, Kvitsiani, D., Kepecs, A., and Koulakov, A. | <a href="javascript:($('#foraging').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>When do we stick to ongoing plans, and when do we seek better options? We show that such decisions flip when the perceived reward falls below its average over the recent past.
+							<p id="foraging" style="display:none;">When do we stick to ongoing plans, and when do we seek better options? We show that such decisions flip when the perceived reward falls below its average over the recent past.
 							We argue that this approach is compute-inexpensive and Bayes-optimal in ever-changing natural environments.</p>
 						</div>
 					</section>
@@ -159,17 +197,16 @@
 
 							<header>
 								<h4><b><a href="https://www.biorxiv.org/content/10.1101/255661v2">The primacy model and the structure of olfactory space</a></b></h4>
-								<p>bioRxiv, 2023 | Giaffar, H., <b>Shuvaev, S.,</b> Rinberg, D., and Koulakov, A.</p>
+								<p>bioRxiv, 2023 | Giaffar, H., <b>Shuvaev, S.,</b> Rinberg, D., and Koulakov, A. | <a href="javascript:($('#primacy').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>The perceived smell identity doesn't change with an increase in odor concentration despite new cells firing in the brain. How is it represented?
+							<p id="primacy" style="display:none;">The perceived smell identity doesn't change with an increase in odor concentration despite new cells firing in the brain. How is it represented?
 							We show that the odor identity is encoded in groups of first-responding cells and that the wiring of the fruit fly's brain supports the processing of this code.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://proceedings.mlr.press/v97/tran19b.html">DeepNose: Using artificial neural networks to represent the space of odorants</a></b></h4>
-								<p>ICML, 2019 | Tran, N., Kepple, D., <b>Shuvaev, S.,</b> and Koulakov, A.</p>
+								<p>ICML, 2019 | Tran, N., Kepple, D., <b>Shuvaev, S.,</b> and Koulakov, A. | <a href="javascript:($('#deepnose').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>How to predict smell knowing the molecular structure of an odorant? In human, odorants hit the smell receptors at various angles exposing various features of the molecule.
+							<p id="deepnose" style="display:none;">How to predict smell knowing the molecular structure of an odorant? In human, odorants hit the smell receptors at various angles exposing various features of the molecule.
 							We reproduced this scheme in a convolutional network to set the state-of-the-art for odor classification performance.</p>											
 						</div>
 					</section>
@@ -182,17 +219,16 @@
 						<div class="content">
 							<header>
 								<h4><b><a href="https://www.biorxiv.org/content/10.1101/2021.03.16.435261v2.abstract">Encoding innate ability through a genomic bottleneck</a></b></h4>
-								<p>bioRxiv, 2021 | Koulakov, A., <b>Shuvaev, S.,</b> Lachi, D., and Zador, A.</p>
+								<p>bioRxiv, 2021 | Koulakov, A., <b>Shuvaev, S.,</b> Lachi, D., and Zador, A. | <a href="javascript:($('#bottleneck').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>The brain wiring is specified by the genome, yet the information in the brain exceeds the genomic capacity. Here we show that such a gap -
+							<p id="bottleneck" style="display:none;">The brain wiring is specified by the genome, yet the information in the brain exceeds the genomic capacity. Here we show that such a gap -
 							the genomic bottleneck - can be bridged by constraining the networks' degrees of freedom to form connectivities that are both efficient and compressible.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://www.pnas.org/doi/full/10.1073/pnas.1706012116">Network cloning using DNA barcodes</a></b></h4>
-								<p>PNAS, 2019 | <b>Shuvaev, S.,</b> Başerdem, B., Zador, A., and Koulakov, A.</p>
+								<p>PNAS, 2019 | <b>Shuvaev, S.,</b> Başerdem, B., Zador, A., and Koulakov, A. | <a href="javascript:($('#network_cloning').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>Connections between neurons shape the experience and the innate abilities of a person. How do these connections unfold in the brain of a newborn?
+							<p id="network_cloning" style="display:none;">Connections between neurons shape the experience and the innate abilities of a person. How do these connections unfold in the brain of a newborn?
 							Here we propose a theoretical model for such unfolding based on "barcodes" - the unique markers tagging individual neurons with distinct labels.</p>											
 						</div>
 					</section>
@@ -204,27 +240,25 @@
 						</header>
 						<div class="content">
 							<header>
-								<h4><b><a href="https://www.sciencedirect.com/science/article/pii/S2215016119302353">Click histochemistry for whole-mount staining of brain structures</a></b></h4>
-								<p>MethodsX, 2019 | Lazutkin, A., <b>Shuvaev, S.,</b> and Barykina, N.</p>
-							</header>
-							<p>Memory and cognition rely on stem cells and their division in the brain. To study stem cells across the brain, we propose using synthetic DNA "letters"
-							that get into newly-divided cells and "click" to small fluorescent molecules, illuminating these cells brain-wide under 3D microscopes.</p>
-							<hr style="margin: 0 0 1rem 0">
-
-							<header>
 								<h4><b><a href="https://www.nature.com/articles/s41598-022-06871-8">Spatiotemporal 3D image registration for mesoscale studies of brain development</a></b></h4>
-								<p>Scientific Reports, 2022 | <b>Shuvaev, S.,</b> Lazutkin, A., Kiryanov, R., Anokhin, K., Enikolopov, G., and Koulakov, A.</p>
+								<p>Scientific Reports, 2022 | <b>Shuvaev, S.,</b> Lazutkin, A., Kiryanov, R., Anokhin, K., Enikolopov, G., and Koulakov, A. | <a href="javascript:($('#registration').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>What's changing in the brain during disease, and how do the changes evolve? Here we introduce CORGI, an algorithm to align 3D images of the brain,
+							<p id="registration" style="display:none;">What's changing in the brain during disease, and how do the changes evolve? Here we introduce CORGI, an algorithm to align 3D images of the brain,
 							"matching" brain regions and "synchronizing" brain samples. On output, it shows time-dependent maps of changes in healthy and affected brains.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://www.frontiersin.org/articles/10.3389/fnana.2017.00117/full">DALMATIAN: an algorithm for automatic cell detection and counting in 3D</a></b></h4>
-								<p>Front Neuroanat, 2017 | <b>Shuvaev, S.,</b> Lazutkin, A., Kedrov, A., Anokhin, K., Enikolopov, G., and Koulakov, A.</p>
+								<p>Front Neuroanat, 2017 | <b>Shuvaev, S.,</b> Lazutkin, A., Kedrov, A., Anokhin, K., Enikolopov, G., and Koulakov, A. | <a href="javascript:($('#dalmatian').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>Whole-brain microscopy has become a commonplace tool, generating amounts of data far beyond the throughput of expert analysis.
+							<p id="dalmatian" style="display:none;">Whole-brain microscopy has become a commonplace tool, generating amounts of data far beyond the throughput of expert analysis.
 							To facilitate whole-brain studies of cell populations, we introduce DALMATIAN, an automated cell detection algorithm compatible with common types of cell markers.</p>
+
+							<header>
+								<h4><b><a href="https://www.sciencedirect.com/science/article/pii/S2215016119302353">Click histochemistry for whole-mount staining of brain structures</a></b></h4>
+								<p>MethodsX, 2019 | Lazutkin, A., <b>Shuvaev, S.,</b> and Barykina, N. | <a href="javascript:($('#microscopy').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="microscopy" style="display:none;">Memory and cognition rely on stem cells and their division in the brain. To study stem cells across the brain, we propose using synthetic DNA "letters"
+							that get into newly-divided cells and "click" to small fluorescent molecules, illuminating these cells brain-wide under 3D microscopes.</p>
 						</div>
 					</section>
 
@@ -236,25 +270,23 @@
 						<div class="content">
 							<header>
 								<h4><b><a href="https://">3D topography and dynamics of neurogenic zones in mouse brain</a></b></h4>
-								<p>In preparation</p>
+								<p>In preparation | <a href="javascript:($('#development').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>How to grasp the dynamics of neurogenesis? Repeated whole-brain microscopy and alignment allow reconstructing stem cell division and migration over time.
+							<p id="development" style="display:none;">How to grasp the dynamics of neurogenesis? Repeated whole-brain microscopy and alignment allow reconstructing stem cell division and migration over time.
 							We used it to find new migratory paths of stem cells in the mouse brain and describe their changes from birth to adulthood.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://">Effects of Memantine and Fluoxetine on cell proliferation in adult mouse brain</a></b></h4>
-								<p>In preparation</p>
+								<p>In preparation | <a href="javascript:($('#memantine').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>Antidepressants and cognition-enchansing medicine operate through altering the hippocampal neurogenesis in the brain. How do they act?
+							<p id="memantine" style="display:none;">Antidepressants and cognition-enchansing medicine operate through altering the hippocampal neurogenesis in the brain. How do they act?
 							We characterize the local changes in neurogenesis caused by two popular drugs, offering a stepping stone for future studies of their function.</p>
-							<hr style="margin: 0 0 1rem 0">
 
 							<header>
 								<h4><b><a href="https://journals.lww.com/neuroreport/Abstract/2019/05020/Suppressed_neurogenesis_without_cognitive.2.aspx">Suppressed neurogenesis without cognitive deficits: effects of fast neutron irradiation in mice</a></b></h4>
-								<p>Neuroreport, 2019 | Mineyeva, O., Barykina, N., Bezriadnov, D., ..., <b>Shuvaev, S.,</b> Usova, S., and Lazutkin, A.</p>
+								<p>Neuroreport, 2019 | Mineyeva, O., Barykina, N., Bezriadnov, D., ..., <b>Shuvaev, S.,</b> Usova, S., and Lazutkin, A. | <a href="javascript:($('#radiation').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p>Frequent flyers are exposed to fast neutron irradiation coming from cosmic rays in the Earth's magnetosphere. Does it put them at risk?
+							<p id="radiation" style="display:none;">Frequent flyers are exposed to fast neutron irradiation coming from cosmic rays in the Earth's magnetosphere. Does it put them at risk?
 							We find that, while such irradiation does not cause memory deficit or behavior changes in mice, it suppresses the division of stem cells in their brain.</p>
 						</div>
 					</section>

@@ -2721,8 +2721,8 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			width: 40%;
-			max-width: 10rem;
+			width: 100%;
+			max-width: 20rem;
 		}
 
 			.image.left img, .image.right img {
@@ -2979,7 +2979,7 @@ input, select, textarea {
 
 	header p {
 		position: relative;
-		margin: -0.65rem 0 1.5rem 0;
+		margin: -1rem 0 1.5rem 0;
 		font-style: italic;
 	}
 

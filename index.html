@@ -21,18 +21,18 @@
 					<h2><b>Sergey Shuvaev, Ph.D.</b></h2>
 				</head>
 				<p>
-					My research focuses on biologically-informed models of decision-making. Toward this goal, I combine computational neuroscience and artificial intelligence.
+					My research focuses on building AI models of the brain and behavior. Toward this goal, I combine computational neuroscience and machine learning.
 					At the <a href="https://www.upenn.edu/">University of Pennsylvania</a>, I build neuro-AI foundation models for better clinical outcomes in behavioral disorders.
 
 					I hold a B.Sc., M.Sc., and Ph.D. in Applied Mathematics and Physics from the Moscow Institute of Physics and Technology.
 					My Ph.D. focused on machine-learning models of behavior, which I designed in residence at <a href="http://cshl.edu">Cold Spring Harbor Laboratory</a>.
 					My B.Sc. comprised developing computer-vision pipelines for neuroimaging. During my M.Sc., I complemented my computational background with experience in electrical engineering.
 
-					My work led to <a href="https://scholar.google.com/citations?user=2u5O9OwAAAAJ">15+ publications with 150+ citations</a>;
+					My work led to <a href="https://scholar.google.com/citations?user=2u5O9OwAAAAJ">15+ publications with 200+ citations</a>;
 					it was featured in <a href="https://nautil.us/the-doctor-will-sniff-you-now-238116/">Nautilus</a>, <a href="https://www.spectrumnews.org/news/a-stop-motion-movie-of-the-whole-brain-starring-new-neurons/">Spectrum</a>,
 					<a href="https://coexisting-with-ai.simplecast.com/episodes/cwa4-human-brains-vs-artificial-brains-H9FUaC_z">Coexisting with AI</a>, and <a href="https://www.eye-on.ai/podcast-021">Eye on AI</a>.
 					I was honored to be selected as a Swartz Fellow (Ph.D.), an Alexandrov Scholar (M.Sc.), and an Abramov and Frolov Scholar (B.Sc.).
-					My service as a reviewer (ICML, ICLR, NeurIPS) was recognized with three Top Reviewer awards.
+					My service as a reviewer (ICML, ICLR, NeurIPS) was recognized with 5+ Top Reviewer awards.
 				</p>
 				<ul class="icons">
 					<li><a href="mailto:sergey.a.shuvaev@gmail.com" class="icon style2 fa-envelope"></a></li>
@@ -102,8 +102,14 @@
 							<header>
 								<h4><b>Postdoctoral Researcher</b> (Mar 2025 - present)</h4>
 							</header>
-							<p>I curate data and develop neuro-AI foundation models of neural and behavioral dynamics for brain-machine interfaces
+							<p>I develop neuro-AI foundation models of neural and behavioral dynamics for brain-machine interfaces
 							toward improved clinical outcomes in behavioral disorders.</p>
+							<ul>
+								<li>Co-led the development of a long-term wavelet-based time series forecasting model;</li>
+								<li>Worked on the development and deployment of a multi-patient model of neural activity;</li>
+								<li>Applying these models to intracranial recordings from varied patient groups.</li>
+							</ul>
+							<p><a href="#work-penn" class="smooth-scroll">Publications:</a> 2 co-last-author (incl. NeurIPS BrainBodyFM Spotlight)</p>
 						</div>
 					</section>
 
@@ -172,6 +178,28 @@
 			<div class="inner">
 				<h2>Publications</h2>
 				<div class="index align-left">
+
+					<!-- Neurosurgery -->
+					<section id="work-penn">
+						<header>
+							<h3>Neurosurgery</h3>
+						</header>
+						<div class="content">
+							<header>
+								<h4><b><a href="https://openreview.net/pdf?id=CdP8Y4K4fz">A scalable self-supervised method for modeling human intracranial recordings during natural behavior</a></b></h4>
+								<p>NeurIPS BrainBodyFM <b>Spotlight</b>, 2025 | Mahato, S.*, Xiao, J.*, Andre, A., Chau, G., Ma, W., Knight, I., Nguen, D., Hu, L., Brunton, B., Beauchamp, M., Pesaran, B., <b>Shuvaev, S.,</b> Dyer, E  | <a href="javascript:($('#charmander').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="charmander" style="display:none;">To improve the clinical outcomes for behavioral disorders in neurosurgery, one needs to know how the brain activity relates to behavior. To model this mapping, we built a Transformer model that combines multi-patient neural activity.
+								We show that scaling across patients furthers the model's predictive power.</p>
+
+							<header>
+								<h4><b><a href="https://openreview.net/pdf?id=mGdx3g7VxN">PRISM: A hierarchical multiscale approach for time series forecasting</a></b></h4>
+								<p>ICLR (under review), 2026 | Chen, Z., Andre, A., Ma, W., Knight, I., <b>Shuvaev, S.,</b> Dyer, E. | <a href="javascript:($('#prism').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="prism" style="display:none;">Accurate forecasting of neural activity is crucial for adaptive DBS, the frontier neurosurgical treatment for severe behavioral disorders. To meet this goal, we combine the interpretability of wavelets with the data-driven flexibility of deep learning.
+								We show that our model enables accurate forecasting over long horizons.</p>
+						</div>
+					</section>
 
 					<!-- Behavior -->
 					<section id="work-cshl">

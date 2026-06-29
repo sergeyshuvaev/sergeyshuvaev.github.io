@@ -105,9 +105,9 @@
 							<p>I develop neuro-AI foundation models of neural and behavioral dynamics for brain-machine interfaces
 							toward improved clinical outcomes in behavioral disorders.</p>
 							<ul>
-								<li>Co-led the development of a long-term wavelet-based time series forecasting model;</li>
-								<li>Worked on the development and deployment of a multi-patient model of neural activity;</li>
-								<li>Applying these models to intracranial recordings from diverse patient groups.</li>
+								<li>Developing and deploying robust models of neural activity and behavior;</li>
+								<li>Co-leading the development of interpretable time-series forecasting models;</li>
+								<li>Applying these models to identify biomarkers and therapeutic targets in patient groups.</li>
 							</ul>
 							<p><a href="#work-penn" class="smooth-scroll">Publications:</a> 2 co-last-author (incl. NeurIPS BrainBodyFM Spotlight)</p>
 						</div>
@@ -179,25 +179,64 @@
 				<h2>Publications</h2>
 				<div class="index align-left">
 
-					<!-- Neurosurgery -->
+					<!-- Electrophysiology -->
 					<section id="work-penn">
 						<header>
-							<h3>Neurosurgery</h3>
+							<h3>Electrophysiology</h3>
 						</header>
 						<div class="content">
+							<header>
+								<h4><b><a href="https://">Personalized Network Biomarkers of Deep Brain Stimulation Response in Obsessive-Compulsive Disorder</a></b></h4>
+								<p>In preparation | <a href="javascript:($('#ocd_trial').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="ocd_trial" style="display:none;">Patient condition in treatment-resistant OCD can be improved with deep brain stimulation.
+								To identify the stimulation targets and biomarkers, we developed a robust automatic data processing pipeline.
+								The processed data has allowed us to identify the disorder-related networks in the brain.</p>
+
 							<header>
 								<h4><b><a href="https://openreview.net/pdf?id=CdP8Y4K4fz">A scalable self-supervised method for modeling human intracranial recordings during natural behavior</a></b></h4>
 								<p>NeurIPS BrainBodyFM <b>Spotlight</b>, 2025 | Mahato, S.*, Xiao, J.*, ..., Beauchamp, M., Pesaran, B., <b>Shuvaev, S.,</b> Dyer, E  | <a href="javascript:($('#charmander').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p id="charmander" style="display:none;">To improve the clinical outcomes for behavioral disorders in neurosurgery, one needs to know how the brain activity relates to behavior. To model this mapping, we built a Transformer model that combines multi-patient neural activity.
-								We show that scaling across patients furthers the model's predictive power.</p>
+							<p id="charmander" style="display:none;">Inpatient brain recordings and reports remain sparse to minimize the burden on patients. This requires additional modeling considerations.
+								We show that self-supervised learning of brain activity plus finetuning on behavioral data best captures the neural counterparts of behavior.</p>
+						</div>
+					</section>
 
+					<!-- Time series -->
+					<section>
+						<header>
+							<h3>Time series</h3>
+						</header>
+						<div class="content">
 							<header>
 								<h4><b><a href="https://arxiv.org/abs/2512.24898">PRISM: A hierarchical multiscale approach for time series forecasting</a></b></h4>
 								<p>arXiv, 2025 | Chen, Z., Andre, A., Ma, W., Knight, I., <b>Shuvaev, S.,</b> Dyer, E. | <a href="javascript:($('#prism').slideToggle('slow'))(jQuery)">summary</a></p>
 							</header>
-							<p id="prism" style="display:none;">Accurate forecasting of neural activity is crucial for adaptive DBS, the frontier neurosurgical treatment for severe behavioral disorders. To meet this goal, we combine the interpretability of wavelets with the data-driven flexibility of deep learning.
-								We show that our model enables accurate forecasting over long horizons.</p>
+							<p id="prism" style="display:none;">Time series are well-modeled in the wavelet domain, however, higher precision requires exponentially more features.
+								To prevent overfitting, we propose an encoder that combines wavelet features with importance scoring.
+								Our encoder shows SOTA results on the majority of 100+ tested datasets.</p>
+							
+							<header>
+								<h4><b><a href="https://">MeLD: Mixtures of localized diffusion processes for time series forecasting</a></b></h4>
+								<p>In submission | Chen, Z., Andre, A., Ma, W., Knight, I., Azabou, M., Wu, A., <b>Shuvaev, S.,</b> Dyer, E. | <a href="javascript:($('#meld').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="meld" style="display:none;">We argue that time-series datasets represent instantiations of noisy generative processes.
+								We model these processes with diffusion and introduce the minimum-over-N metric from CV for evaluaiton.
+								Identified nonzero uncertainty of standard benchmarks calls for their distributional modeling.</p>
+
+							<header>
+								<h4><b><a href="https://">SCRyER: A scalable framework for forecasting neural population activity</a></b></h4>
+								<p>In submission | Chen, Z., Kwak, S., Andre, A., Knight, I., Ma, W., Pesaran, B., <b>Shuvaev, S.,</b> Dyer, E. | <a href="javascript:($('#scryer').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="scryer" style="display:none;">Neural activity has several distinct properties: signal structure is shared across channels, events have stereotyped shape, events are sparse.
+								To account for these properties, we use attention, matching feature sets, and stratification, leading to biologically relevant predictions.</p>
+
+							<header>
+								<h4><b><a href="https://">MuLTA: Multi-level transport alignment for time-series domain generalization</a></b></h4>
+								<p>In submission | Ma, W., Chen, Z., Liu, R., <b>Shuvaev, S.,</b> Dyer, E  | <a href="javascript:($('#multa').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="multa" style="display:none;">Time-series data can come from devices with different properties. To jointly use such data, it should be uninfied for the model training.
+								We view this as an optimal transport problem, leading to improved domain generalization across clinically relevant biosignal benchmarks.</p>
 						</div>
 					</section>
 
@@ -236,6 +275,13 @@
 							<h3>Olfaction</h3>
 						</header>
 						<div class="content">
+							<header>
+								<h4><b><a href="https://">Modeling odor transport from jar to receptors</a></b></h4>
+								<p>In preparation | <a href="javascript:($('#odor_transport').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="odor_transport" style="display:none;">Odor perception is hard to model becuase it's highly nonlinear and the data is sparse.
+								Here we use physics and chemistry to model the odor transport all the way to the nervous system.
+								We use these approximated neural inputs in deep learning and show improvement in predicting odor percepts.</p>
 
 							<header>
 								<h4><b><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012379">The primacy model and the structure of olfactory space</a></b></h4>
@@ -253,12 +299,20 @@
 						</div>
 					</section>
 
-					<!-- Neurodevelopment -->
+					<!-- Hypernetworks -->
 					<section>
 						<header>
-							<h3>Neurodevelopment</h3>
+							<h3>Hypernetworks</h3>
 						</header>
 						<div class="content">
+							<header>
+								<h4><b><a href="https://">Training hypernetworks at scale</a></b></h4>
+								<p>In preparation | <a href="javascript:($('#hypernetworks').slideToggle('slow'))(jQuery)">summary</a></p>
+							</header>
+							<p id="hypernetworks" style="display:none;">Hypernetworks reduce a model's parameter count while maintaining its performance.
+								While geared at LLMs, hypernetworks have only been tested on toy tasks.
+								Here, in theory and experiment, we show a set of considerations for that makes such scaling computationally tractable and plausible.</p>
+
 							<header>
 								<h4><b><a href="https://www.pnas.org/doi/full/10.1073/pnas.2409160121">Encoding innate ability through a genomic bottleneck</a></b></h4>
 								<p>PNAS, 2024 | <b>Shuvaev, S.,</b> Lachi, D., Koulakov, A., and Zador, A. | <a href="javascript:($('#bottleneck').slideToggle('slow'))(jQuery)">summary</a></p>

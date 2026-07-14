@@ -11,6 +11,103 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Featured projects carousel -->
+		<style>
+			.project-carousel {
+				position: relative;
+				width: 100%;
+			}
+
+			.project-viewport {
+				overflow: hidden;
+				width: 100%;
+			}
+
+			.project-track {
+				display: flex;
+				width: 100%;
+				transition: transform 0.6s ease-in-out;
+				will-change: transform;
+			}
+
+			.project-slide {
+				flex: 0 0 100%;
+				min-width: 100%;
+				box-sizing: border-box;
+			}
+
+			/* Navigation arrows */
+			.project-nav {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 2.25em;
+				height: 2.25em;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				color: #000000 !important;
+				font-size: 1.5em;
+				line-height: 2.25em;
+				text-align: center;
+				cursor: pointer;
+				z-index: 2;
+				box-shadow: none;
+				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			}
+
+			.project-nav:hover {
+				box-shadow: none;
+				color: #47D3E5 !important;
+			}
+
+			.project-nav:active {
+				background-color: transparent;
+				box-shadow: none;
+			}
+
+			.project-nav.prev { left: -2.9rem; }
+			.project-nav.next { right: -2.9rem; }
+
+			/* Dots */
+			.project-dots {
+				display: flex;
+				justify-content: center;
+				gap: 0.6em;
+				margin-top: 1.5em;
+			}
+
+			.project-dots button {
+				width: 0.7em;
+				height: 0.7em;
+				padding: 0;
+				border: 0;
+				border-radius: 100%;
+				background-color: rgba(0, 0, 0, 0.2);
+				cursor: pointer;
+				box-shadow: none;
+				transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+			}
+
+			.project-dots button:hover { background-color: rgba(0, 0, 0, 0.4); }
+
+			.project-dots button.active {
+				background-color: #47D3E5;
+				transform: scale(1.2);
+			}
+
+			@media screen and (max-width: 1680px) {
+				.project-nav.prev { left: -2.4rem; }
+				.project-nav.next { right: -2.4rem; }
+			}
+
+			@media screen and (max-width: 736px) {
+				.project-nav { width: 1.7em; height: 1.7em; font-size: 1.2em; line-height: 1.7em; }
+				.project-nav.prev { left: -1.9rem; }
+				.project-nav.next { right: -1.9rem; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -54,7 +151,12 @@
 			<div class="inner">
 				<h2>Featured projects</h2>
 
-					<div class="content align-left">
+					<div class="project-carousel" id="project-carousel">
+						<div class="project-viewport">
+						<div class="project-track">
+
+						<div class="project-slide">
+						<div class="content align-left">
 
 						<h4 class="align-center"><b>Multi-agent: </b>normative theory of conflict</h4>
 						<p>
@@ -67,6 +169,11 @@
 							Overall, our work offers a robust biologically-informed model of social conflict and a framework for future studies of social behaviors in partially observable settings.
 							| <i><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/8ec61d4084443d29c9e47ac60f9aea31-Abstract-Conference.html">paper</a></i>
 						</p>
+						</div>
+						</div>
+
+						<div class="project-slide">
+						<div class="content align-left">
 
 						<h4 class="align-center"><b>Single-agent: </b>algorithmic basis of stay-or-leave decisions</h4>
 						<p>
@@ -80,7 +187,18 @@
 							Overall, our work links RL, optimal control, and Bayesian inference to describe a learning algorithm, a decision rule, and a rationale for stay-or-leave choices.
 							| <i><a href="https://proceedings.neurips.cc/paper/2020/hash/da97f65bd113e490a5fab20c4a69f586-Abstract.html">paper</a></i>
 						</p>
-					</div>
+						</div>
+						</div>
+
+						</div><!-- /.project-track -->
+						</div><!-- /.project-viewport -->
+
+						<button class="project-nav prev" type="button" aria-label="Previous project">&#8249;</button>
+						<button class="project-nav next" type="button" aria-label="Next project">&#8250;</button>
+
+					</div><!-- /.project-carousel -->
+
+					<div class="project-dots" id="project-dots" aria-hidden="true"></div>
 			</div>
 		</section>
 
@@ -176,10 +294,11 @@
 		<section class="wrapper style1 align-center" id="work">
 			<div class="inner">
 				<h2>Publications</h2>
+				<h3 class="align-center" id="work-penn"><u>University of Pennsylvania</u></h3>
 				<div class="index align-left">
 
 					<!-- Electrophysiology -->
-					<section id="work-penn">
+					<section>
 						<header>
 							<h3>Electrophysiology</h3>
 						</header>
@@ -239,8 +358,12 @@
 						</div>
 					</section>
 
+				</div>
+				<h3 class="align-center" id="work-cshl"><u>Cold Spring Harbor Laboratory</u></h3>
+				<div class="index align-left">
+
 					<!-- Behavior -->
-					<section id="work-cshl">
+					<section>
 						<header>
 							<h3>Behavior</h3>
 						</header>
@@ -328,8 +451,12 @@
 						</div>
 					</section>
 
+				</div>
+				<h3 class="align-center" id="work-mipt"><u>Moscow Institute of Physics and Technology</u></h3>
+				<div class="index align-left">
+
 					<!-- Neuroimaging -->
-					<section id="work-mipt">
+					<section>
 						<header>
 							<h3>Neuroimaging</h3>
 						</header>
@@ -419,5 +546,76 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- Featured projects carousel -->
+		<script>
+			(function () {
+				var carousel = document.getElementById('project-carousel');
+				if (!carousel) return;
+
+				var track  = carousel.querySelector('.project-track');
+				var slides = Array.prototype.slice.call(carousel.querySelectorAll('.project-slide'));
+				var prev   = carousel.querySelector('.project-nav.prev');
+				var next   = carousel.querySelector('.project-nav.next');
+				var dotsWrap = document.getElementById('project-dots');
+
+				if (slides.length < 2) {
+					// Nothing to scroll through - hide the controls.
+					if (prev) prev.style.display = 'none';
+					if (next) next.style.display = 'none';
+					if (dotsWrap) dotsWrap.style.display = 'none';
+					return;
+				}
+
+				var index = 0;
+				var AUTOSCROLL_MS = 6000;
+				var timer = null;
+
+				// Build one dot per slide.
+				var dots = slides.map(function (_, i) {
+					var dot = document.createElement('button');
+					dot.type = 'button';
+					dot.setAttribute('aria-label', 'Go to project ' + (i + 1));
+					dot.addEventListener('click', function () { goTo(i); restart(); });
+					dotsWrap.appendChild(dot);
+					return dot;
+				});
+
+				function goTo(i) {
+					index = (i + slides.length) % slides.length;
+					track.style.transform = 'translateX(' + (-index * 100) + '%)';
+					dots.forEach(function (d, di) {
+						d.classList.toggle('active', di === index);
+					});
+				}
+
+				function nextSlide() { goTo(index + 1); }
+				function prevSlide() { goTo(index - 1); }
+
+				function start() {
+					stop();
+					timer = setInterval(nextSlide, AUTOSCROLL_MS);
+				}
+				function stop() {
+					if (timer) { clearInterval(timer); timer = null; }
+				}
+				function restart() { start(); }
+
+				next.addEventListener('click', function () { nextSlide(); restart(); });
+				prev.addEventListener('click', function () { prevSlide(); restart(); });
+
+				// Pause while the visitor is reading (hovering), resume on leave.
+				carousel.addEventListener('mouseenter', stop);
+				carousel.addEventListener('mouseleave', start);
+
+				// Pause when the tab is hidden.
+				document.addEventListener('visibilitychange', function () {
+					if (document.hidden) stop(); else start();
+				});
+
+				goTo(0);
+				start();
+			})();
+		</script>
 	</body>
 </html>

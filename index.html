@@ -608,6 +608,7 @@
 				var index = 0;
 				var AUTOSCROLL_MS = 6000;
 				var timer = null;
+				var hovered = false;
 
 				// Build one dot per slide.
 				var dots = slides.map(function (_, i) {
@@ -637,18 +638,19 @@
 				function stop() {
 					if (timer) { clearInterval(timer); timer = null; }
 				}
-				function restart() { start(); }
+				function restart() { stop(); if (!hovered) start(); }
 
 				next.addEventListener('click', function () { nextSlide(); restart(); });
 				prev.addEventListener('click', function () { prevSlide(); restart(); });
 
-				// Pause while the visitor is reading (hovering), resume on leave.
-				carousel.addEventListener('mouseenter', stop);
-				carousel.addEventListener('mouseleave', start);
+				// Pause whenever the cursor is anywhere over the projects block (slides, arrows, or dots).
+				var hoverZone = carousel.parentNode;
+				hoverZone.addEventListener('mouseenter', function () { hovered = true; stop(); });
+				hoverZone.addEventListener('mouseleave', function () { hovered = false; start(); });
 
 				// Pause when the tab is hidden.
 				document.addEventListener('visibilitychange', function () {
-					if (document.hidden) stop(); else start();
+					if (document.hidden) stop(); else if (!hovered) start();
 				});
 
 				goTo(0);
